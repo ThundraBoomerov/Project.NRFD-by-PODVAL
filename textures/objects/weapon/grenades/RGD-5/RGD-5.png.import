@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2opl8t5ajlmj"
-path="res://.godot/imported/Снимок экрана 2024-09-16 102510.png-3c831638deca56d6312678cb5ce55d73.ctex"
+uid="uid://bql0py3rxjl16"
+path="res://.godot/imported/RGD-5.png-2bf0c5b56ee3bf166676e591fc4c4a0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/objects/Снимок экрана 2024-09-16 102510.png"
-dest_files=["res://.godot/imported/Снимок экрана 2024-09-16 102510.png-3c831638deca56d6312678cb5ce55d73.ctex"]
+source_file="res://textures/objects/weapon/grenades/RGD-5/RGD-5.png"
+dest_files=["res://.godot/imported/RGD-5.png-2bf0c5b56ee3bf166676e591fc4c4a0b.ctex"]
 
 [params]
 
