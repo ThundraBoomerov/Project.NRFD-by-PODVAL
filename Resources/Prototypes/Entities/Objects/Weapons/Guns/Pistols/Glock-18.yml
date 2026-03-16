@@ -1,0 +1,61 @@
+- type: entity
+  name: Glock-18
+  parent: [BaseWeaponPistol, BaseSecurityContraband]
+  categories: [ HideSpawnMenu ]
+  id: WeaponGlock18
+  description: Автоматическая версия легендарного Glock-17. Создана для спецназа, чтобы враг в штабеля ложился. Калибр 9x19 мм Parabellum. Патрон нормальный, человеческий.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Pistols/glock18.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Small
+    storedOffset: 0,-2
+  - type: Gun
+    fireRate: 6
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/glock18_shot.ogg
+    minAngle: 1
+    maxAngle: 6
+    angleIncrease: 1.5
+    angleDecay: 6
+    selectedMode: SemiAuto
+    shotsPerBurst: 3
+    burstCooldown: 0.2
+    burstFireRate: 12
+    availableModes:
+    - Burst
+    - SemiAuto
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolGlock18
+        insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolGlock18
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistolParabellum
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: AmmoCounter
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/pistol_cock.ogg
+  - type: Appearance
+  - type: StaticPrice
+    price: 1500

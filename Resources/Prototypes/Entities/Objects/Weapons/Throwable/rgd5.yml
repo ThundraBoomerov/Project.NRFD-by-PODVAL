@@ -1,0 +1,27 @@
+- type: entity
+  name: РГД-5
+  description: Ручной подарок для духов. Наступалка. Лёгкая, сука, компактная — в кармане разгрузки не заметишь, пока по делу не пойдёт. Выдернул кольцо — и пошёл писать письма. Безотказная, как валенок. Родилась в 1954-м, а до сих пор по всему миру скачет.
+  parent: [VolatileGrenadeBase, TimerGrenadeBase, BaseSyndicateContraband]
+  id: RGD5Grenade
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/rgd5.rsi
+  - type: ExplodeOnTrigger
+    keysIn:
+    - timer
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 20
+    intensitySlope: 10
+    totalIntensity: 240 # about a ~8 tile radius
+    canCreateVacuum: false
+  - type: FlashOnTrigger
+    keysIn:
+    - timer
+    range: 7
+  - type: TimerTrigger
+    initialBeepDelay: 0
+    beepInterval: 4
+  - type: StaticPrice
+    price: 100
+  - type: Appearance

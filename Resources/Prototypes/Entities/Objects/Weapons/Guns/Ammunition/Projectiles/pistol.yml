@@ -1,0 +1,67 @@
+- type: entity
+  parent: BaseBullet
+  id: BulletPistol
+  categories: [ HideSpawnMenu ]
+  name: пуля (.35 auto)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 16
+
+- type: entity
+  parent: BaseBulletPractice
+  id: BulletPistolPractice
+  categories: [ HideSpawnMenu ]
+  name: пуля (.35 auto учебные)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+
+- type: entity
+  parent: BaseBulletIncendiary
+  id: BulletPistolIncendiary
+  categories: [ HideSpawnMenu ]
+  name: пуля (.35 auto зажигательные)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 12
+        Heat: 4
+
+- type: entity
+  parent: BaseBulletUranium
+  id: BulletPistolUranium
+  categories: [ HideSpawnMenu ]
+  name: пуля (.35 auto урановые)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 6
+        Piercing: 10
+
+- type: entity
+  parent: BaseBullet
+  id: BulletPistolParabellum
+  categories: [ HideSpawnMenu ]
+  name: пуля (9x19 parabellum)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 23
+
+- type: entity
+  parent: BaseBulletPractice
+  id: BulletPistolParabellumPractice
+  categories: [ HideSpawnMenu ]
+  name: пуля (9x19 parabellum учебные)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 4

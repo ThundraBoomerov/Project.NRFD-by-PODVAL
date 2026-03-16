@@ -1,0 +1,42 @@
+- type: entity
+  name: РШГ-1
+  parent: [ BaseWeaponLauncher, BaseMajorContraband ]
+  categories: [ HideSpawnMenu ]
+  id: WeaponLauncherRSHG1
+  description: «Шайтан-труба». Подарок для духов в бетонной коробке. Дом, окоп, бункер — всё в пыль. Живая сила в радиусе десяти метров — в ноль. Одноразовая, но после неё и цели больше нет.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Launchers/rshg1.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Launchers/rshg1.rsi
+  - type: Gun
+    fireRate: 0.5
+    minAngle: 30          # без хвата - дикий разброс
+    maxAngle: 90
+    minWieldedAngle: 5    # с хватом - точность
+    maxWieldedAngle: 15
+    projectileSpeed: 25
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rshg_shot.ogg
+    cannotManuallyRemoveChamber: true
+    cannotManuallyRemoveMagazine: true
+  - type: Wieldable
+  - type: UseDelay
+    delay: 2.0
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:ContainerSlot
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeRocket
+    proto: CartridgeRocket
+    capacity: 1
+  - type: StaticPrice
+    price: 1200
+  - type: Appearance

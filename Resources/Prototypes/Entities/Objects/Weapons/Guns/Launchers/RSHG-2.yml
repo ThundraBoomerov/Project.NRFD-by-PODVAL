@@ -1,0 +1,42 @@
+- type: entity
+  name: РШГ-2
+  parent: [ BaseWeaponLauncher, BaseMajorContraband ]
+  categories: [ HideSpawnMenu ]
+  id: WeaponLauncherRSHG2
+  description: «Шмелёв»-переросток, только без ранца. Стрельнул в окно — из дома пошёл дым, а звуков никаких. Потому что все, кто там были, уже не дышат. Выдернул чеку, поднял прицел, нажал — и пошёл дальше. Для городских боёв — то, что доктор прописал.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Launchers/rshg2.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Launchers/rshg2.rsi
+  - type: Gun
+    fireRate: 0.5
+    minAngle: 30          # без хвата - дикий разброс
+    maxAngle: 90
+    minWieldedAngle: 3    # с хватом - точность
+    maxWieldedAngle: 9
+    projectileSpeed: 25
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rshg_shot.ogg
+    cannotManuallyRemoveChamber: true
+    cannotManuallyRemoveMagazine: true
+  - type: Wieldable
+  - type: UseDelay
+    delay: 2.0
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:ContainerSlot
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeRocket
+    proto: CartridgeRocket
+    capacity: 1
+  - type: StaticPrice
+    price: 1600
+  - type: Appearance
